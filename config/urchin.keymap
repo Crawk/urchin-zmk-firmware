@@ -130,7 +130,7 @@
         combo_settings {
             timeout-ms = <200>;
             key-positions = <30 31>;
-            bindings = <&mo 7>;
+            bindings = <&mo 8>;
         };
 
         // left index & middle fingers (home-row)
@@ -191,10 +191,10 @@
         fnc_layer {
             label = "FRow";
             bindings = <
-&kp F1    &kp F2    &kp F3      &kp F4     &kp F5    &kp F6   &kp F7   &kp F8           &kp F9  &kp F10
-&sk LALT  &sk LGUI  &sk LSHIFT  &sk LCTRL  &kp RALT  &kp F11  &kp F12  &kp PRINTSCREEN  &trans  &trans
-&none     &none     &none       &none      &none     &none    &none    &none            &none   &none
-                                &none      &none     &none    &none
+&kp F1        &kp F2        &kp F3     &kp F4          &kp F5    &kp F6   &kp F7   &kp F8           &kp F9  &kp F10
+&sk LEFT_WIN  &sk LEFT_ALT  &sk LCTRL  &sk LEFT_SHIFT  &kp RALT  &kp F11  &kp F12  &kp PRINTSCREEN  &trans  &trans
+&none         &none         &none      &none           &none     &none    &none    &none            &none   &none
+                                       &none           &none     &none    &none
             >;
         };
 
@@ -218,13 +218,22 @@
             >;
         };
 
-        settings_layer {
+        NAV {
             label = "Sett.";
             bindings = <
 &bootloader     &none  &none  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 3  &none  &unstick  &none  &bootloader
 &none           &none  &none  &none       &bt BT_SEL 1  &bt BT_SEL 4  &none  &none     &none  &none
 &studio_unlock  &none  &none  &none       &bt BT_SEL 2  &bt BT_SEL 5  &none  &none     &none  &studio_unlock
                               &none       &none         &none         &none
+            >;
+        };
+
+        layer_8 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans
             >;
         };
     };
