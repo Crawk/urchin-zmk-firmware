@@ -167,6 +167,13 @@
             timeout-ms = <200>;
             layers = <0>;
         };
+
+        tog1_Miryoku {
+            bindings = <&tog 1>;
+            key-positions = <4 5>;
+            layers = <0 1>;
+            timeout-ms = <350>;
+        };
     };
 
     keymap {
