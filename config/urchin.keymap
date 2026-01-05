@@ -301,10 +301,10 @@
         sym_layer {
             label = "Sym.";
             bindings = <
-&as NUMBER_1   &as NUMBER_2   &as NUMBER_3  &as NUMBER_4  &as N5    &as NUMBER_6  &as N7         &as N8     &as N9        &as N0
-&kp LESS_THAN  &kp LS(PRCNT)  &kp LS(LPAR)  &kp LS(LBRC)  &kp LBKT  &kp EQUAL     &kp LS(QMARK)  &as SQT    &kp LS(PLUS)  &longPress LS(STAR) PIPE
-&kp LS(GT)     &kp LS(DLLR)   &kp LS(RPAR)  &kp LS(RBRC)  &kp RBKT  &kp LS(AT)    &kp LS(EXCL)   &as GRAVE  &kp MINUS     &longPress BACKSLASH SLASH
-                                            &mo 5         &mo 0     &trans        &trans
+&as NUMBER_1             &as NUMBER_2               &as NUMBER_3                 &as NUMBER_4                           &as N5    &as NUMBER_6  &as N7                      &as N8     &as N9        &as N0
+&HML LEFT_WIN LESS_THAN  &HML LS(LEFT_ALT) AT_SIGN  &HML LCTRL LEFT_PARENTHESIS  &HMShiftL LEFT_SHIFT LEFT_PARENTHESIS  &kp LBKT  &kp EQUAL     &HMR RIGHT_SHIFT SEMICOLON  &as SQT    &kp LS(PLUS)  &longPress LS(STAR) PIPE
+&kp LS(GT)               &kp LS(DLLR)               &kp LS(RPAR)                 &kp LS(RBRC)                           &kp RBKT  &kp LS(AT)    &kp LS(EXCL)                &as GRAVE  &kp MINUS     &longPress BACKSLASH SLASH
+                                                                                 &mo 5                                  &mo 0     &trans        &trans
             >;
         };
 
