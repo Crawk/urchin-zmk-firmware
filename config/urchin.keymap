@@ -301,10 +301,10 @@
         sym_layer {
             label = "Sym.";
             bindings = <
-&longPress EXCLAMATION NUMBER_1  &longPress AT_SIGN NUMBER_2  &longPress HASH NUMBER_3  &longPress DOLLAR NUMBER_4  &longPress PERCENT N5  &longPress CARET NUMBER_6  &longPress AMPERSAND N7  &longPress ASTERISK N8  &longPress LEFT_PARENTHESIS N9  &longPress RIGHT_PARENTHESIS N0
-&kp LESS_THAN                    &kp LS(PRCNT)                &kp LS(LPAR)              &kp LS(LBRC)                &kp LBKT               &kp EQUAL                  &kp LS(QMARK)            &as SQT                 &kp LS(PLUS)                    &longPress LS(STAR) PIPE
-&kp LS(GT)                       &kp LS(DLLR)                 &kp LS(RPAR)              &kp LS(RBRC)                &kp RBKT               &kp LS(AT)                 &kp LS(EXCL)             &as GRAVE               &kp MINUS                       &longPress BACKSLASH SLASH
-                                                                                        &mo 5                       &mo 0                  &trans                     &trans
+&as NUMBER_1   &as NUMBER_2   &as NUMBER_3  &as NUMBER_4  &as N5    &as NUMBER_6  &as N7         &as N8     &as N9        &as N0
+&kp LESS_THAN  &kp LS(PRCNT)  &kp LS(LPAR)  &kp LS(LBRC)  &kp LBKT  &kp EQUAL     &kp LS(QMARK)  &as SQT    &kp LS(PLUS)  &longPress LS(STAR) PIPE
+&kp LS(GT)     &kp LS(DLLR)   &kp LS(RPAR)  &kp LS(RBRC)  &kp RBKT  &kp LS(AT)    &kp LS(EXCL)   &as GRAVE  &kp MINUS     &longPress BACKSLASH SLASH
+                                            &mo 5         &mo 0     &trans        &trans
             >;
         };
 
