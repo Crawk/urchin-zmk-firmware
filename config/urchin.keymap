@@ -319,7 +319,7 @@
         };
 
         fnc_layer {
-            label = "FRow";
+            label = "FNC";
             bindings = <
 &kp F1        &kp F2        &kp F3     &kp F4          &kp F5    &kp F6   &kp F7   &kp F8           &kp F9  &kp F10
 &sk LEFT_WIN  &sk LEFT_ALT  &sk LCTRL  &sk LEFT_SHIFT  &kp RALT  &kp F11  &kp F12  &kp PRINTSCREEN  &trans  &trans
@@ -338,13 +338,15 @@
             >;
         };
 
-        NUML {
+        NUM_LEFT {
             bindings = <
 &kp LS(PLUS)  &kp N7  &kp N8  &kp N9  &kp FSLH      &trans  &trans    &kp UP    &trans     &trans
 &kp MINUS     &kp N4  &kp N5  &kp N6  &kp EQUAL     &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans
 &kp DOT       &kp N1  &kp N2  &kp N3  &kp LS(STAR)  &trans  &kp TAB   &trans    &trans     &trans
                               &kp N0  &kp ENTER     &trans  &trans
             >;
+
+            label = "NUM_L";
         };
 
         MOUSE {
@@ -354,6 +356,8 @@
 &trans        &trans        &trans            &trans          &trans  &mkp MB3        &trans          &trans          &trans           &trans
                                               &trans          &trans  &mkp MB1        &mkp MB2
             >;
+
+            label = "MOUSE";
         };
 
         SETT {
