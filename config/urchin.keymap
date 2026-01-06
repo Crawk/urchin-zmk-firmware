@@ -167,15 +167,15 @@
 
         // both right thumb keys
 
-        combo_numL {
+        tog7_numL {
             timeout-ms = <200>;
             key-positions = <32 33>;
-            bindings = <&mo 7>;
+            bindings = <&tog 7>;
         };
 
         // internal-left & external-right thumb keys
 
-        combo_mouse {
+        tog8_mouse {
             timeout-ms = <200>;
             key-positions = <30 24>;
             bindings = <&tog 8>;
@@ -183,10 +183,10 @@
 
         // both left thumb keys
 
-        combo_num {
+        tog6_num {
             timeout-ms = <200>;
             key-positions = <30 31>;
-            bindings = <&mo 6>;
+            bindings = <&tog 6>;
         };
 
         // left index & middle fingers (home-row)
@@ -206,7 +206,7 @@
             layers = <0>;
         };
 
-        tog1_Miryoku {
+        tog2_Miryoku {
             bindings = <&tog 2>;
             key-positions = <4 5>;
             layers = <0 2>;
@@ -223,7 +223,7 @@
         caps {
             bindings = <&kp CLCK>;
             key-positions = <14 15>;
-            timeout-ms = <200>;
+            timeout-ms = <350>;
             layers = <0 3 2 5 6 7 8>;
         };
 
@@ -234,7 +234,7 @@
             layers = <0 3 2 5 6 7 8>;
         };
 
-        game {
+        tog1_game {
             bindings = <&tog 1>;
             key-positions = <3 6>;
             timeout-ms = <350>;
@@ -257,7 +257,7 @@
 
         combo_settings {
             bindings = <&mo 9>;
-            key-positions = <31 33>;
+            key-positions = <1 8>;
             timeout-ms = <1000>;
         };
     };
@@ -313,7 +313,7 @@
             bindings = <
 &kp ESC       &kp C_PREV    &kp C_PP          &kp C_NEXT      &kp C_PAUSE  &kp PG_UP     &kp HOME  &kp UP    &kp END    &kp CAPS
 &sk LEFT_GUI  &sk LEFT_ALT  &sk LEFT_CONTROL  &sk LEFT_SHIFT  &kp RALT     &kp PG_DN     &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL
-&kp LC(Z)     &kp LC(X)     &kp LC(C)         &kp TAB         &kp LC(V)    &kp LC(BSPC)  &kp BSPC  &trans    &trans     &trans
+&kp LC(Z)     &kp LC(X)     &kp LC(C)         &kp TAB         &kp LC(V)    &kp LC(BSPC)  &kp BSPC  &trans    &trans     &caps_word
                                               &trans          &kp LCTRL    &kp ENTER     &mo 5
             >;
         };
@@ -324,7 +324,7 @@
 &kp F1        &kp F2        &kp F3                   &kp F4          &kp F5       &kp F6     &kp F7          &kp F8          &kp F9           &kp F10
 &sk LEFT_WIN  &sk LEFT_ALT  &sk LCTRL                &sk LEFT_SHIFT  &kp RALT     &kp F11    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
 &kp F11       &kp F12       &longPress K_CUT K_COPY  &kp TAB         &kp K_PASTE  &mkp MCLK  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
-                                                     &none           &kp ENTER    &mkp LCLK  &mkp RCLK
+                                                     &kp BACKSPACE   &kp ENTER    &mkp LCLK  &mkp RCLK
             >;
         };
 
@@ -351,10 +351,10 @@
 
         MOUSE {
             bindings = <
-&trans        &trans        &trans            &trans          &trans  &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &trans
-&kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans  &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans
-&trans        &trans        &trans            &trans          &trans  &mkp MB3        &trans          &trans          &trans           &trans
-                                              &trans          &trans  &mkp MB1        &mkp MB2
+&trans        &trans        &trans            &trans          &trans     &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &trans
+&kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans     &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans
+&trans        &trans        &trans            &trans          &trans     &mkp MB3        &trans          &trans          &trans           &trans
+                                              &kp BACKSPACE   &kp ENTER  &mkp MB1        &mkp MB2
             >;
 
             label = "MOUSE";
