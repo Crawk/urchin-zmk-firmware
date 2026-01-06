@@ -308,7 +308,7 @@
             >;
         };
 
-        ext_layer {
+        MOD_layer {
             label = "Mods";
             bindings = <
 &kp ESC       &kp C_PREV    &kp C_PP          &kp C_NEXT      &kp C_PAUSE  &kp PG_UP     &kp HOME  &kp UP    &kp END    &kp CAPS
