@@ -170,7 +170,7 @@
         tog7_numL {
             timeout-ms = <200>;
             key-positions = <32 33>;
-            bindings = <&tog 7>;
+            bindings = <&tog 8>;
         };
 
         // internal-left & external-right thumb keys
@@ -178,7 +178,7 @@
         tog8_mouse {
             timeout-ms = <200>;
             key-positions = <30 24>;
-            bindings = <&tog 8>;
+            bindings = <&tog 6>;
         };
 
         // both left thumb keys
@@ -186,7 +186,7 @@
         tog6_num {
             timeout-ms = <200>;
             key-positions = <30 31>;
-            bindings = <&tog 6>;
+            bindings = <&tog 7>;
         };
 
         // left index & middle fingers (home-row)
@@ -217,21 +217,21 @@
             bindings = <&kp ESCAPE>;
             key-positions = <0 1>;
             timeout-ms = <200>;
-            layers = <0 3 2 5 6 7 8>;
+            layers = <0 3 2 5 7 8 6>;
         };
 
         caps {
             bindings = <&kp CLCK>;
             key-positions = <14 15>;
             timeout-ms = <350>;
-            layers = <0 3 2 5 6 7 8>;
+            layers = <0 3 2 5 7 8 6>;
         };
 
         printscn {
             bindings = <&kp PRINTSCREEN>;
             key-positions = <8 9>;
             timeout-ms = <200>;
-            layers = <0 3 2 5 6 7 8>;
+            layers = <0 3 2 5 7 8 6>;
         };
 
         tog1_game {
@@ -328,6 +328,17 @@
             >;
         };
 
+        MOUSE {
+            bindings = <
+&trans        &trans        &trans                   &trans          &trans       &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &trans
+&kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_CONTROL         &kp LEFT_SHIFT  &trans       &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans
+&trans        &trans        &longPress K_CUT K_COPY  &kp TAB         &kp K_PASTE  &mkp MB3        &trans          &trans          &trans           &trans
+                                                     &kp BACKSPACE   &kp ENTER    &mkp MB1        &mkp MB2
+            >;
+
+            label = "MOUSE";
+        };
+
         NUM {
             label = "NUM";
             bindings = <
@@ -347,17 +358,6 @@
             >;
 
             label = "NUM_L";
-        };
-
-        MOUSE {
-            bindings = <
-&trans        &trans        &trans            &trans          &trans     &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &trans
-&kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &trans     &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans
-&trans        &trans        &trans            &trans          &trans     &mkp MB3        &trans          &trans          &trans           &trans
-                                              &kp BACKSPACE   &kp ENTER  &mkp MB1        &mkp MB2
-            >;
-
-            label = "MOUSE";
         };
 
         SETT {
