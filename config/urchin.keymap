@@ -212,9 +212,9 @@
 
         tog2_Miryoku {
             bindings = <&tog 2>;
-            key-positions = <4 5>;
-            layers = <0 2>;
+            key-positions = <2 7>;
             timeout-ms = <350>;
+            slow-release;
         };
 
         esc {
@@ -263,6 +263,13 @@
             bindings = <&mo 9>;
             key-positions = <1 8>;
             timeout-ms = <1000>;
+        };
+
+        tog_base {
+            bindings = <&tog 0>;
+            key-positions = <4 5>;
+            timeout-ms = <350>;
+            slow-release;
         };
     };
 
