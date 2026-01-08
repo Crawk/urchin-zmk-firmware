@@ -94,11 +94,11 @@
             hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 32 33>;
         };
 
-        underscoreDBT: underscoreDBT {
+        DBT_EQ_PLUS: DBT_EQ_PLUS {
             compatible = "zmk,behavior-tap-dance";
-            label = "UNDERSCOREDBT";
+            label = "DBT_EQ_PLUS";
             #binding-cells = <0>;
-            bindings = <&kp MINUS>, <&kp UNDERSCORE>;
+            bindings = <&kp EQUAL>, <&kp PLUS>;
 
             tapping-term-ms = <200>;
         };
@@ -266,7 +266,7 @@
         };
 
         tog_base {
-            bindings = <&tog 0>;
+            bindings = <&to 0>;
             key-positions = <4 5>;
             timeout-ms = <350>;
             slow-release;
@@ -313,7 +313,7 @@
             label = "Sym.";
             bindings = <
 &longPress LS(EXCLAMATION) NUMBER_1  &as NUMBER_2               &as NUMBER_3           &as NUMBER_4                           &as N5    &as NUMBER_6          &as N7                           &as N8                   &as N9                &longPress RIGHT_PARENTHESIS N0
-&HML LEFT_WIN LESS_THAN              &HML LS(LEFT_ALT) AT_SIGN  &HML LCTRL LEFT_BRACE  &HMShiftL LEFT_SHIFT LEFT_PARENTHESIS  &kp LBKT  &as EQUAL             &HMShiftR RIGHT_SHIFT SEMICOLON  &HMR RCTRL SINGLE_QUOTE  &HMR RIGHT_ALT MINUS  &as LS(EQUAL)
+&HML LEFT_WIN LESS_THAN              &HML LS(LEFT_ALT) AT_SIGN  &HML LCTRL LEFT_BRACE  &HMShiftL LEFT_SHIFT LEFT_PARENTHESIS  &kp LBKT  &as EQUAL             &HMShiftR RIGHT_SHIFT SEMICOLON  &HMR RCTRL SINGLE_QUOTE  &HMR RIGHT_ALT MINUS  &DBT_EQ_PLUS
 &kp LS(GT)                           &kp LS(DLLR)               &kp RBRC               &kp LS(RBRC)                           &kp RBKT  &as NON_US_BACKSLASH  &as COLON                        &as GRAVE                &kp ASTERISK          &as SLASH
                                                                                        &mo 5                                  &mo 0     &trans                &trans
             >;
