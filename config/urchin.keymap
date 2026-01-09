@@ -171,7 +171,7 @@
         // both right thumb keys
 
         tog_numL {
-            timeout-ms = <400>;
+            timeout-ms = <1200>;
             key-positions = <32 33>;
             bindings = <&tog 8>;
             slow-release;
@@ -180,7 +180,7 @@
         // internal-left & external-right thumb keys
 
         tog_mouse {
-            timeout-ms = <400>;
+            timeout-ms = <1200>;
             key-positions = <30 24>;
             bindings = <&tog 6>;
             slow-release;
@@ -189,7 +189,7 @@
         // both left thumb keys
 
         tog_num {
-            timeout-ms = <400>;
+            timeout-ms = <1200>;
             key-positions = <30 31>;
             bindings = <&tog 7>;
             slow-release;
@@ -215,7 +215,7 @@
         tog2_Miryoku {
             bindings = <&tog 2>;
             key-positions = <2 7>;
-            timeout-ms = <350>;
+            timeout-ms = <1200>;
             slow-release;
         };
 
@@ -243,8 +243,7 @@
         tog1_game {
             bindings = <&tog 1>;
             key-positions = <3 6>;
-            timeout-ms = <350>;
-            layers = <0 2 1>;
+            timeout-ms = <1200>;
             slow-release;
         };
 
@@ -264,15 +263,15 @@
 
         combo_settings {
             bindings = <&mo 9>;
-            key-positions = <1 8>;
-            timeout-ms = <1000>;
+            key-positions = <1 24>;
+            timeout-ms = <1200>;
             slow-release;
         };
 
         tog_base {
             bindings = <&to 0>;
             key-positions = <4 5>;
-            timeout-ms = <350>;
+            timeout-ms = <1200>;
             slow-release;
         };
     };
@@ -316,10 +315,10 @@
         sym_layer {
             label = "Sym.";
             bindings = <
-&longPress LS(EXCLAMATION) NUMBER_1  &as NUMBER_2               &as NUMBER_3           &as NUMBER_4                           &as N5    &as NUMBER_6          &as N7                           &as N8                   &as N9                &longPress RIGHT_PARENTHESIS N0
-&HML LEFT_WIN LESS_THAN              &HML LS(LEFT_ALT) AT_SIGN  &HML LCTRL LEFT_BRACE  &HMShiftL LEFT_SHIFT LEFT_PARENTHESIS  &kp LBKT  &as EQUAL             &HMShiftR RIGHT_SHIFT SEMICOLON  &HMR RCTRL SINGLE_QUOTE  &HMR RIGHT_ALT MINUS  &DBT_EQ_PLUS
-&kp LS(GT)                           &kp LS(DLLR)               &kp RBRC               &kp LS(RBRC)                           &kp RBKT  &as NON_US_BACKSLASH  &as COLON                        &as GRAVE                &kp ASTERISK          &as SLASH
-                                                                                       &mo 5                                  &mo 0     &trans                &trans
+&longPress LS(EXCLAMATION) NUMBER_1  &longPress AT_SIGN NUMBER_2  &longPress HASH NUMBER_3  &longPress DOLLAR NUMBER_4             &longPress PERCENT N5  &longPress CARET NUMBER_6  &longPress LS(N7) N7             &longPress LS(N8) N8     &longPress RS(N9) N9  &longPress RIGHT_PARENTHESIS N0
+&HML LEFT_WIN LESS_THAN              &HML LS(LEFT_ALT) AT_SIGN    &HML LCTRL LEFT_BRACE     &HMShiftL LEFT_SHIFT LEFT_PARENTHESIS  &kp LBKT               &as EQUAL                  &HMShiftR RIGHT_SHIFT SEMICOLON  &HMR RCTRL SINGLE_QUOTE  &HMR RIGHT_ALT MINUS  &DBT_EQ_PLUS
+&kp LS(GT)                           &kp LS(DLLR)                 &kp RBRC                  &kp LS(RBRC)                           &kp RBKT               &as NON_US_BACKSLASH       &as COLON                        &as GRAVE                &kp ASTERISK          &as SLASH
+                                                                                            &mo 5                                  &mo 0                  &trans                     &trans
             >;
         };
 
