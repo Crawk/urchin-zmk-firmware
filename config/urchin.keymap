@@ -184,7 +184,7 @@
 
         tog_mouse {
             timeout-ms = <1200>;
-            key-positions = <30 24>;
+            key-positions = <24 23>;
             bindings = <&tog 6>;
             slow-release;
         };
