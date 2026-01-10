@@ -75,7 +75,6 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <800>;
-            hold-while-undecided;
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31>;
             hold-trigger-on-release;
             flavor = "balanced";
