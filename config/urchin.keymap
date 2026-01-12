@@ -31,12 +31,6 @@
 
 // -----------------
 
-&sk {
-    // don't release mods on other mods presses
-
-    ignore-modifiers;
-};
-
 / {
     behaviors {
         // Enables holding the first mod-tap key
@@ -212,13 +206,6 @@
         // left index & middle fingers (home-row)
         // hold control & space for Adobe workflow
 
-        combo_ctrl_space {
-            timeout-ms = <200>;
-            key-positions = <12 13>;
-            bindings = <&kp LC(SPACE)>;
-            layers = <0>;
-        };
-
         semicolon {
             bindings = <&kp SEMICOLON>;
             key-positions = <19 18>;
@@ -361,10 +348,10 @@
 
         MOUSE {
             bindings = <
-&trans        &trans        &trans                   &trans          &trans       &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &trans
-&kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_CONTROL         &kp LEFT_SHIFT  &trans       &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans
-&trans        &trans        &longPress K_CUT K_COPY  &kp TAB         &kp K_PASTE  &mkp MB3        &trans          &trans          &trans           &trans
-                                                     &kp BACKSPACE   &kp ENTER    &mkp MB1        &mkp MB2
+&trans        &trans        &trans                   &trans          &kp BACKSPACE  &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &trans
+&kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_CONTROL         &kp LEFT_SHIFT  &kp K_PASTE    &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans
+&trans        &trans        &longPress K_CUT K_COPY  &kp TAB         &none          &mkp MB3        &trans          &trans          &trans           &trans
+                                                     &none           &kp ENTER      &mkp MB1        &mkp MB2
             >;
 
             label = "MOUSE";
