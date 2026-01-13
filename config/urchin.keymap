@@ -137,7 +137,7 @@
             bindings = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
         };
 
-        as: autoshift_hold_tap {
+        as: AUTOSHIFT_KP {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -147,7 +147,7 @@
                 <&macro_release>,
                 <&macro_param_1to1 &macro_param_1to2 &as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>;
 
-            label = "AUTOSHIFT_HOLD_TAP";
+            label = "AUTOSHIFT_KP";
             wait-ms = <190>;
             tap-ms = <(-1)>;
         };
