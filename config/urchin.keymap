@@ -163,7 +163,7 @@
                 <&macro_release>,
                 <&kp LEFT_SHIFT>;
 
-            label = "SHIFT";
+            label = "MACRO_SHIFTED_KP";
         };
     };
 
