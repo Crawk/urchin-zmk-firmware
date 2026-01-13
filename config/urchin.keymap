@@ -245,14 +245,6 @@
             layers = <0 3 2 5 7 8 6>;
         };
 
-        tog1_game {
-            bindings = <&tog 1>;
-            key-positions = <3 6>;
-            timeout-ms = <1200>;
-            slow-release;
-            require-prior-idle-ms = <200>;
-        };
-
         undo {
             bindings = <&kp K_UNDO>;
             key-positions = <20 21>;
@@ -277,6 +269,14 @@
         tog_base {
             bindings = <&to 0>;
             key-positions = <4 5>;
+            timeout-ms = <1200>;
+            slow-release;
+            require-prior-idle-ms = <200>;
+        };
+
+        tog1_game {
+            bindings = <&tog 1>;
+            key-positions = <3 6>;
             timeout-ms = <1200>;
             slow-release;
             require-prior-idle-ms = <200>;
