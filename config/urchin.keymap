@@ -24,24 +24,12 @@
 #define SETT 9
 
 // -----------------
+
 &mmv {
     x-input-code = <INPUT_REL_X>;
     y-input-code = <INPUT_REL_Y>;
     time-to-max-speed-ms = <300>;
     acceleration-exponent = <2>;
-};
-
-&msc {
-    x-input-code = <INPUT_REL_HWHEEL>;
-    y-input-code = <INPUT_REL_WHEEL>;
-    time-to-max-speed-ms = <300>;
-    acceleration-exponent = <2>;
-};
-
-&sk {
-    // don't release mods on other mods presses
-
-    ignore-modifiers;
 };
 
 / {
@@ -372,8 +360,8 @@
 
         MOUSE {
             bindings = <
-&none         &none         &none             &none           &kp K_PASTE  &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &none
-&kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none        &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
+&none         &none         &none             &none           &kp K_PASTE  &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
+&kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none        &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
 &none         &kp K_CUT     &kp K_COPY        &kp K_PASTE     &kp TAB      &mkp MB3        &none           &none           &none            &to 0
                                               &kp BACKSPACE   &kp ENTER    &mkp MB1        &mkp MB2
             >;
