@@ -33,8 +33,8 @@
     y-input-code = <200>;
     time-to-max-speed-ms = <300>;
     acceleration-exponent = <2>;
-    trigger-period-ms = <(-1)>;
-    delay-ms = <(-1)>;
+    trigger-period-ms = <(0)>;
+    delay-ms = <(0)>;
 };
 
 &msc {
@@ -42,8 +42,8 @@
     y-input-code = <100>;
     time-to-max-speed-ms = <300>;
     acceleration-exponent = <2>;
-    delay-ms = <(-1)>;
-    trigger-period-ms = <(-1)>;
+    delay-ms = <(0)>;
+    trigger-period-ms = <(0>;
 };
 
 &sk {
