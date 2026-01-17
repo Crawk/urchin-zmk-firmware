@@ -27,23 +27,18 @@
 #define SETT 9
 
 // -----------------
-
 &mmv {
-    x-input-code = <200>;
-    y-input-code = <200>;
+    x-input-code = <INPUT_REL_X>;
+    y-input-code = <INPUT_REL_Y>;
     time-to-max-speed-ms = <300>;
-    acceleration-exponent = <2>;
-    trigger-period-ms = <(0)>;
-    delay-ms = <(0)>;
+    acceleration-exponent = <1>;
 };
 
 &msc {
-    x-input-code = <100>;
-    y-input-code = <100>;
+    x-input-code = <INPUT_REL_HWHEEL>;
+    y-input-code = <INPUT_REL_WHEEL>;
     time-to-max-speed-ms = <300>;
-    acceleration-exponent = <2>;
-    delay-ms = <(0)>;
-    trigger-period-ms = <(0>;
+    acceleration-exponent = <0>;
 };
 
 &sk {
