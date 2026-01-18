@@ -27,6 +27,7 @@
 #define SETT 9
 
 // -----------------
+
 &mmv {
     x-input-code = <INPUT_REL_X>;
     y-input-code = <INPUT_REL_Y>;
@@ -307,6 +308,14 @@
             slow-release;
             require-prior-idle-ms = <150>;
         };
+
+        tog11_mouseL {
+            bindings = <&tog 10>;
+            key-positions = <24 30>;
+            require-prior-idle-ms = <1000>;
+            timeout-ms = <200>;
+            slow-release;
+        };
     };
 
     keymap {
@@ -414,6 +423,16 @@
 &none           &none  &none  &none       &bt BT_SEL 1  &bt BT_SEL 4  &none  &none     &none  &none
 &studio_unlock  &none  &none  &none       &bt BT_SEL 2  &bt BT_SEL 5  &none  &none     &none  &studio_unlock
                               &none       &none         &none         &none
+            >;
+        };
+
+        MOUSE_L {
+            label = "MOUSE_L";
+            bindings = <
+&msc SCRL_UP    &none           &mmv MOVE_UP    &kp K_PASTE      &none     &msc SCRL_UP    &msc SCRL_LEFT   &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
+&msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none     &msc SCRL_DOWN  &kp RIGHT_SHIFT  &kp RCTRL       &kp RIGHT_ALT    &kp RIGHT_GUI
+&none           &kp K_CUT       &kp K_COPY      &kp K_PASTE      &mkp MB3  &mkp MB3        &none            &mmv MOVE_DOWN  &none            &none
+                                                &mkp MB2         &mkp MB1  &kp ENTER       &mkp MB2
             >;
         };
     };
