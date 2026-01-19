@@ -311,7 +311,6 @@
             bindings = <&kp K_UNDO>;
             key-positions = <20 21>;
             timeout-ms = <200>;
-            layers = <0 2>;
             require-prior-idle-ms = <150>;
         };
 
