@@ -6,6 +6,7 @@
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
+#define TD_TAPPING_TERM 300
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -156,6 +157,29 @@
             quick-tap-ms = <150>;
             require-prior-idle-ms = <100>;
             hold-trigger-key-positions = <33>;
+        };
+
+        /*
+        * Tap dancing shift
+        *
+        * Usage: &td_shift_l / &td_shift_r
+        * Hold: Shift
+        * Double Tap: Caps Word
+        * Triple Tap: Caps Lock
+        */
+
+        td_shift_l: td_shift_l {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <TD_TAPPING_TERM>;
+            bindings = <&kp LEFT_SHIFT>, <&caps_word>, <&kp CAPSLOCK>;
+        };
+
+        td_shift_r: td_shift_r {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <TD_TAPPING_TERM>;
+            bindings = <&kp RIGHT_SHIFT>, <&caps_word>, <&kp CAPSLOCK>;
         };
     };
 
