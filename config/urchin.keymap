@@ -260,7 +260,7 @@
             layers = <0 2>;
         };
 
-        tog_mouse {
+        tog_mouseR {
             timeout-ms = <500>;
             key-positions = <33 25>;
             bindings = <&tog 6>;
@@ -331,7 +331,7 @@
             require-prior-idle-ms = <150>;
         };
 
-        tog11_mouseL {
+        tog_mouseL {
             bindings = <&tog 7>;
             key-positions = <24 30>;
             require-prior-idle-ms = <1000>;
