@@ -181,15 +181,6 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
         };
-
-        /*
-        * Tap dancing shift
-        *
-        * Usage: &td_shift_l / &td_shift_r
-        * Hold: Shift
-        * Double Tap: Caps Word
-        * Triple Tap: Caps Lock
-        */
     };
 
     macros {
