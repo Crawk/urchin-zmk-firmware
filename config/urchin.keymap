@@ -146,7 +146,7 @@
             bindings = <&shift>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <135>;
             flavor = "hold-preferred";
         };
 
@@ -205,7 +205,7 @@
                 <&macro_param_1to1 &macro_param_1to2 &as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>;
 
             label = "AUTOSHIFT_KP";
-            wait-ms = <190>;
+            wait-ms = <150>;
             tap-ms = <(-1)>;
         };
 
@@ -388,7 +388,7 @@
             bindings = <
 &as NUMBER_1             &as NUMBER_2               &as NUMBER_3           &as NUMBER_4                           &as N5    &as NUMBER_6          &as NUMBER_7                     &as N8              &as N9                &as N0
 &HML LEFT_WIN LESS_THAN  &HML LS(LEFT_ALT) AT_SIGN  &HML LCTRL LEFT_BRACE  &HMShiftL LEFT_SHIFT LEFT_PARENTHESIS  &kp LBKT  &as GRAVE             &HMShiftR RIGHT_SHIFT SEMICOLON  &HMR RCTRL KP_PLUS  &HMR RIGHT_ALT MINUS  &as EQUAL
-&kp LS(GT)               &kp LS(DLLR)               &kp RBRC               &kp LS(RBRC)                           &kp RBKT  &as NON_US_BACKSLASH  &as COLON                        &as CARET           &kp ASTERISK          &as SLASH
+&kp LS(GT)               &kp LS(DLLR)               &kp RBRC               &kp LS(RBRC)                           &kp RBKT  &as NON_US_BACKSLASH  &as COLON                        &as CARET           &kp PLUS              &as SLASH
                                                                            &mo 5                                  &mo 0     &trans                &trans
             >;
         };
