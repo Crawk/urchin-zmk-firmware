@@ -229,10 +229,11 @@
 
         combo_settings {
             bindings = <&mo 10>;
-            key-positions = <1 24>;
+            key-positions = <1 23>;
             timeout-ms = <1200>;
             slow-release;
-            require-prior-idle-ms = <200>;
+            require-prior-idle-ms = <1000>;
+            layers = <0>;
         };
 
         to_base {
@@ -297,7 +298,7 @@
         esc {
             bindings = <&kp ESCAPE>;
             key-positions = <0 1>;
-            timeout-ms = <200>;
+            timeout-ms = <50>;
             require-prior-idle-ms = <175>;
         };
 
@@ -390,12 +391,12 @@
             bindings = <
 &kp ESC       &kp C_PREV    &kp C_PP          &kp C_NEXT      &kp C_PAUSE  &kp PG_UP  &kp HOME      &kp UP    &kp END     &kp INS
 &sk LEFT_GUI  &sk LEFT_ALT  &sk LEFT_CONTROL  &sk LEFT_SHIFT  &kp RALT     &kp PG_DN  &kp LEFT      &kp DOWN  &kp RIGHT   &kp DEL
-&kp LC(Z)     &kp LC(X)     &kp LC(C)         &kp LC(V)       &kp TAB      &kp BSPC   &kp RS(BSPC)  &none     &caps_word  &kp CAPSLOCK
+&kp LC(Z)     &kp LC(X)     &kp LC(C)         &kp LC(V)       &kp TAB      &kp BSPC   &kp RC(BSPC)  &none     &caps_word  &kp CAPSLOCK
                                               &trans          &kp LCTRL    &kp ENTER  &mo 5
             >;
         };
 
-        fnc_mouse {
+        FUNC {
             label = "FNC";
             bindings = <
 &kp F1        &kp F2        &kp F3     &kp F4          &kp F5     &kp F6   &kp F7  &kp F8  &kp F9         &kp F10
