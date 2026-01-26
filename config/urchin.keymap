@@ -6,7 +6,6 @@
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 40    // default: 10
-#define TD_TAPPING_TERM 300
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -163,15 +162,6 @@
             hold-trigger-key-positions = <33>;
         };
 
-        td_mod_layer: td_mod_layer {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_MOD_LAYER";
-            #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&mo 4>, <&kp BACKSPACE>;
-
-            tapping-term-ms = <250>;
-        };
-
         LHT: LHT {
             compatible = "zmk,behavior-hold-tap";
             label = "LHT";
@@ -229,11 +219,10 @@
 
         combo_settings {
             bindings = <&mo 10>;
-            key-positions = <1 23>;
+            key-positions = <1 24>;
             timeout-ms = <1200>;
             slow-release;
-            require-prior-idle-ms = <1000>;
-            layers = <0>;
+            require-prior-idle-ms = <200>;
         };
 
         to_base {
@@ -298,7 +287,15 @@
         esc {
             bindings = <&kp ESCAPE>;
             key-positions = <0 1>;
-            timeout-ms = <50>;
+            timeout-ms = <200>;
+            require-prior-idle-ms = <175>;
+        };
+
+        caps {
+            bindings = <&kp CLCK>;
+            key-positions = <14 15>;
+            timeout-ms = <200>;
+            slow-release;
             require-prior-idle-ms = <175>;
         };
 
@@ -307,7 +304,7 @@
             key-positions = <8 9>;
             timeout-ms = <200>;
             slow-release;
-            require-prior-idle-ms = <1000>;
+            require-prior-idle-ms = <175>;
         };
 
         tog_mouseL {
@@ -321,8 +318,8 @@
         combo-tab {
             bindings = <&kp TAB>;
             key-positions = <10 11>;
-            timeout-ms = <100>;
-            require-prior-idle-ms = <500>;
+            timeout-ms = <200>;
+            require-prior-idle-ms = <150>;
         };
 
         undo {
@@ -391,18 +388,18 @@
             bindings = <
 &kp ESC       &kp C_PREV    &kp C_PP          &kp C_NEXT      &kp C_PAUSE  &kp PG_UP  &kp HOME      &kp UP    &kp END     &kp INS
 &sk LEFT_GUI  &sk LEFT_ALT  &sk LEFT_CONTROL  &sk LEFT_SHIFT  &kp RALT     &kp PG_DN  &kp LEFT      &kp DOWN  &kp RIGHT   &kp DEL
-&kp LC(Z)     &kp LC(X)     &kp LC(C)         &kp LC(V)       &kp TAB      &kp BSPC   &kp RC(BSPC)  &none     &caps_word  &kp CAPSLOCK
+&kp LC(Z)     &kp LC(X)     &kp LC(C)         &kp LC(V)       &kp TAB      &kp BSPC   &kp RS(BSPC)  &none     &caps_word  &kp CAPSLOCK
                                               &trans          &kp LCTRL    &kp ENTER  &mo 5
             >;
         };
 
-        FUNC {
+        fnc_mouse {
             label = "FNC";
             bindings = <
-&kp F1        &kp F2        &kp F3     &kp F4          &kp F5     &kp F6   &kp F7  &kp F8  &kp F9         &kp F10
-&sk LEFT_WIN  &sk LEFT_ALT  &sk LCTRL  &sk LEFT_SHIFT  &kp RALT   &kp F11  &none   &none   &kp RIGHT_ALT  &none
-&kp F11       &kp F12       &none      &kp TAB         &kp LC(V)  &none    &none   &none   &none          &to 0
-                                       &kp BACKSPACE   &kp ENTER  &none    &none
+&kp F1        &kp F2        &kp F3                   &kp F4          &kp F5       &kp F6   &kp F7  &kp F8  &kp F9  &kp F10
+&sk LEFT_WIN  &sk LEFT_ALT  &sk LCTRL                &sk LEFT_SHIFT  &kp RALT     &kp F11  &none   &none   &none   &none
+&kp F11       &kp F12       &longPress K_CUT K_COPY  &kp TAB         &kp K_PASTE  &none    &none   &none   &none   &to 0
+                                                     &kp BACKSPACE   &kp ENTER    &none    &none
             >;
         };
 
