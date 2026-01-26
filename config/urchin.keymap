@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1800  // default: 600
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 40    // default: 10
 #define TD_TAPPING_TERM 300
 
@@ -28,6 +28,20 @@
 #define SETT 9
 
 // -----------------
+
+&mmv {
+    x-input-code = <INPUT_REL_X>;
+    y-input-code = <INPUT_REL_Y>;
+    time-to-max-speed-ms = <300>;
+    acceleration-exponent = <1>;
+};
+
+&msc {
+    x-input-code = <INPUT_REL_HWHEEL>;
+    y-input-code = <INPUT_REL_WHEEL>;
+    time-to-max-speed-ms = <300>;
+    acceleration-exponent = <1>;
+};
 
 &sk {
     // don't release mods on other mods presses
@@ -261,7 +275,7 @@
             key-positions = <31 30>;
             bindings = <&tog 8>;
             slow-release;
-            require-prior-idle-ms = <1000>;
+            require-prior-idle-ms = <2000>;
         };
 
         tog_numL {
@@ -385,9 +399,9 @@
         FUNC {
             label = "FNC";
             bindings = <
-&kp F1        &kp F2        &kp F3     &kp F4          &kp F5     &kp F6   &kp F7           &kp F8             &kp F9         &kp F10
-&sk LEFT_WIN  &sk LEFT_ALT  &sk LCTRL  &sk LEFT_SHIFT  &kp RALT   &kp F11  &kp RIGHT_SHIFT  &kp RIGHT_CONTROL  &kp RIGHT_ALT  &none
-&kp F11       &kp F12       &kp C      &kp TAB         &kp LC(V)  &none    &kp TAB          &none              &none          &to 0
+&kp F1        &kp F2        &kp F3     &kp F4          &kp F5     &kp F6   &kp F7  &kp F8  &kp F9         &kp F10
+&sk LEFT_WIN  &sk LEFT_ALT  &sk LCTRL  &sk LEFT_SHIFT  &kp RALT   &kp F11  &none   &none   &kp RIGHT_ALT  &none
+&kp F11       &kp F12       &none      &kp TAB         &kp LC(V)  &none    &none   &none   &none          &to 0
                                        &kp BACKSPACE   &kp ENTER  &none    &none
             >;
         };
@@ -396,7 +410,7 @@
             bindings = <
 &to 0         &none         &kp HOME          &kp END         &kp LC(Y)  &kp PAGE_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
 &kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none      &kp PAGE_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
-&kp LC(Z)     &kp LC(X)     &kp LC(C)         &kp LC(V)       &kp TAB    &mkp MB3       &none           &none           &none            &none
+&kp LC(Z)     &kp K_CUT     &kp K_COPY        &kp K_PASTE     &kp TAB    &mkp MB3       &none           &none           &none            &none
                                               &kp BACKSPACE   &kp ENTER  &mkp MB1       &mkp MB2
             >;
 
@@ -406,10 +420,10 @@
         MOUSE_L {
             label = "MOUSE_L";
             bindings = <
-&msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &kp PAGE_UP    &kp RC(Y)  &kp HOME         &kp END    &none          &to 0
-&msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp PAGE_DOWN  &none      &kp RIGHT_SHIFT  &kp RCTRL  &kp RIGHT_ALT  &kp RIGHT_GUI
-&kp LC(Z)       &kp LC(X)       &kp LC(C)       &kp LC(V)        &mkp MB3       &kp TAB    &kp RC(V)        &kp RC(C)  &kp RC(X)      &kp RC(Z)
-                                                &mkp MB2         &mkp MB1       &kp ENTER  &kp BACKSPACE
+&msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &kp PAGE_UP    &kp K_REDO  &kp HOME         &kp END     &none          &to 0
+&msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp PAGE_DOWN  &none       &kp RIGHT_SHIFT  &kp RCTRL   &kp RIGHT_ALT  &kp RIGHT_GUI
+&kp K_UNDO      &kp K_CUT       &kp K_COPY      &kp K_PASTE      &mkp MB3       &kp TAB     &kp K_PASTE      &kp K_COPY  &kp K_CUT      &kp K_UNDO
+                                                &mkp MB2         &mkp MB1       &kp ENTER   &kp BACKSPACE
             >;
         };
 
