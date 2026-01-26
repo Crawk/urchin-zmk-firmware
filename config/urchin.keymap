@@ -185,8 +185,8 @@
                 <&macro_param_1to1 &macro_param_1to2 &as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>;
 
             label = "AUTOSHIFT_KP";
-            wait-ms = <150>;
-            tap-ms = <(-1)>;
+            wait-ms = <0>;
+            tap-ms = <0>;
         };
 
         shift: shifted_macro {
