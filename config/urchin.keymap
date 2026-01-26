@@ -34,6 +34,10 @@
     ignore-modifiers;
 };
 
+&mmv { acceleration-exponent = <2>; };
+
+&msc { acceleration-exponent = <1>; };
+
 / {
     behaviors {
         // Enables holding the first mod-tap key
@@ -374,9 +378,9 @@
         fnc {
             label = "FNC";
             bindings = <
-&kp F1        &kp F2        &kp F3     &kp F4          &kp F5     &kp F6   &kp F7  &kp F8  &kp F9  &kp F10
-&sk LEFT_WIN  &sk LEFT_ALT  &sk LCTRL  &sk LEFT_SHIFT  &kp RALT   &kp F11  &none   &none   &none   &none
-&kp F11       &kp F12       &none      &kp TAB         &none      &none    &none   &none   &none   &to 0
+&kp F1        &kp F2        &kp F3     &kp F4          &kp F5     &kp F6   &kp F7   &kp F8  &kp F9         &kp F10
+&sk LEFT_WIN  &sk LEFT_ALT  &sk LCTRL  &sk LEFT_SHIFT  &kp RALT   &kp F11  &none    &none   &kp RIGHT_ALT  &none
+&kp F11       &kp F12       &none      &kp TAB         &none      &none    &kp TAB  &none   &none          &to 0
                                        &kp BACKSPACE   &kp ENTER  &none    &none
             >;
         };
@@ -397,7 +401,7 @@
             bindings = <
 &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &kp PAGE_UP    &kp K_REDO  &kp HOME         &kp END     &none          &to 0
 &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp PAGE_DOWN  &none       &kp RIGHT_SHIFT  &kp RCTRL   &kp RIGHT_ALT  &kp RIGHT_GUI
-&kp K_UNDO      &kp K_CUT       &kp K_COPY      &kp K_PASTE      &mkp MB3       &kp TAB     &kp K_PASTE      &kp K_COPY  &kp K_CUT      &kp K_UNDO
+&kp RC(Z)       &kp LC(X)       &kp LC(C)       &kp LC(V)        &mkp MB3       &kp TAB     &kp K_PASTE      &kp K_COPY  &kp K_CUT      &kp K_UNDO
                                                 &mkp MB2         &mkp MB1       &kp ENTER   &kp BACKSPACE
             >;
         };
