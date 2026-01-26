@@ -275,7 +275,7 @@
             key-positions = <31 30>;
             bindings = <&tog 8>;
             slow-release;
-            require-prior-idle-ms = <2000>;
+            require-prior-idle-ms = <1000>;
         };
 
         tog_numL {
