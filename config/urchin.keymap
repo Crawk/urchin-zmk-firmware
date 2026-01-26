@@ -171,6 +171,7 @@ as_ht: autoshift_hold_tap {
             #binding-cells = <0>;
             bindings = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
         };
+
 shifted: macro_shifted_kp {
       #binding-cells = <1>;
       label = "MACRO_SHIFTED_KP";
@@ -379,14 +380,13 @@ shifted: macro_shifted_kp {
         };
 
         MOUSE_R {
+            label = "MOUSE_R";
             bindings = <
 &to 0         &kp HOME      &kp HOME          &kp END         &kp LC(Y)  &kp PAGE_UP    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP
 &kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &none      &kp PAGE_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN
 &kp LC(Z)     &kp LC(X)     &kp LC(C)         &kp LC(V)       &kp TAB    &mkp MB3       &kp RC(V)       &kp RC(C)       &kp RC(X)        &kp RC(Z)
                                               &kp BACKSPACE   &kp ENTER  &mkp MB1       &mkp MB2
             >;
-
-            label = "MOUSE_R";
         };
 
         MOUSE_L {
