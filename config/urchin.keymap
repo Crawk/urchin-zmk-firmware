@@ -358,10 +358,10 @@
         sym_layer {
             label = "Sym.";
             bindings = <
-&as NUMBER_1             &as NUMBER_2           &as NUMBER_3           &as NUMBER_4                           &as N5    &as NUMBER_6          &as NUMBER_7                     &as N8              &as N9                &as N0
-&HML LEFT_WIN LESS_THAN  &HML LEFT_ALT AT_SIGN  &HML LCTRL LEFT_BRACE  &HMShiftL LEFT_SHIFT LEFT_PARENTHESIS  &kp LBKT  &as GRAVE             &HMShiftR RIGHT_SHIFT SEMICOLON  &HMR RCTRL KP_PLUS  &HMR RIGHT_ALT MINUS  &as EQUAL
-&kp LS(GT)               &kp DOLLAR             &kp RBRC               &kp LS(RBRC)                           &kp RBKT  &as NON_US_BACKSLASH  &as COLON                        &as ASTERISK        &kp PLUS              &as SLASH
-                                                                       &mo 5                                  &mo 0     &trans                &trans
+&as NUMBER_1             &as NUMBER_2           &as NUMBER_3           &as NUMBER_4                           &as N5                &as NUMBER_6          &as NUMBER_7                     &as N8              &as N9                &as N0
+&HML LEFT_WIN LESS_THAN  &HML LEFT_ALT AT_SIGN  &HML LCTRL LEFT_BRACE  &HMShiftL LEFT_SHIFT LEFT_PARENTHESIS  &kp LBKT              &as GRAVE             &HMShiftR RIGHT_SHIFT SEMICOLON  &HMR RCTRL KP_PLUS  &HMR RIGHT_ALT MINUS  &as EQUAL
+&kp LS(GT)               &kp DOLLAR             &kp RBRC               &kp LS(RBRC)                           &kp RBKT              &as NON_US_BACKSLASH  &as COLON                        &as ASTERISK        &kp PLUS              &as SLASH
+                                                                       &mo 5                                  &qt LEFT_SHIFT SPACE  &trans                &trans
             >;
         };
 
