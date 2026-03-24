@@ -363,8 +363,8 @@
         MOD_layer {
             label = "MOD";
             bindings = <
-&kp ESC       &kp C_PREV    &kp C_PP          &kp C_NEXT      &kp C_PAUSE  &kp PG_UP  &kp HOME      &kp UP    &kp END     &kp INS
-&sk LEFT_GUI  &sk LEFT_ALT  &sk LEFT_CONTROL  &sk LEFT_SHIFT  &kp RALT     &kp PG_DN  &kp LEFT      &kp DOWN  &kp RIGHT   &kp DEL
+&kp ESC       &kp C_PREV    &kp C_PP          &kp C_NEXT      &kp C_PAUSE  &kp INS    &kp HOME      &kp UP    &kp END     &kp PG_UP
+&sk LEFT_GUI  &sk LEFT_ALT  &sk LEFT_CONTROL  &sk LEFT_SHIFT  &kp RALT     &kp DEL    &kp LEFT      &kp DOWN  &kp RIGHT   &kp PG_DN
 &kp LC(Z)     &kp LC(X)     &kp LC(C)         &kp LC(V)       &kp TAB      &kp BSPC   &kp RC(BSPC)  &kp TAB   &caps_word  &kp CAPSLOCK
                                               &trans          &kp LCTRL    &kp ENTER  &mo 5
             >;
@@ -373,10 +373,10 @@
         fnc {
             label = "FNC";
             bindings = <
-&kp F1        &kp F2        &kp F3     &kp F4          &kp F5     &kp F6   &kp F7   &kp F8  &kp F9         &kp F10
-&sk LEFT_WIN  &sk LEFT_ALT  &sk LCTRL  &sk LEFT_SHIFT  &kp RALT   &kp F11  &none    &none   &kp RIGHT_ALT  &none
-&kp F11       &kp F12       &none      &kp TAB         &none      &none    &kp TAB  &none   &none          &to 0
-                                       &kp BACKSPACE   &kp ENTER  &none    &none
+&kp F1        &kp F2        &kp F3     &kp F4          &kp F5     &kp F6      &kp F7   &kp F8           &kp F9          &kp F10
+&sk LEFT_WIN  &sk LEFT_ALT  &sk LCTRL  &sk LEFT_SHIFT  &kp RALT   &kp DELETE  &none    &none            &kp RIGHT_ALT   &none
+&kp F11       &kp F12       &none      &kp TAB         &none      &to 0       &kp TAB  &kp PRINTSCREEN  &kp SCROLLLOCK  &kp PAUSE_BREAK
+                                       &kp BACKSPACE   &kp ENTER  &none       &none
             >;
         };
 
